@@ -111,9 +111,7 @@ end
 
 def snake_hitted_himself?
   @body[2..]&.each do |body_part|
-    if @x_player_buffer == body_part[0] && @y_player_buffer == body_part[1]
-      return true
-    end
+   return true if @x_player_buffer == body_part[0] && @y_player_buffer == body_part[1]
   end
   false
 end
