@@ -129,7 +129,7 @@ end
 def move_body
   if can_move?
     body_reverse = @body.reverse
-    @body = @body.map.with_index do |_,i|
+    @body = (0..body_reverse.length - 1).map do |i|
       if i == body_reverse.length - 1
         [@x_player_buffer, @y_player_buffer]
       else
